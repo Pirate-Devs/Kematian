@@ -170,18 +170,6 @@ $encryption_key = "YOUR_ENC_KEY_HERE"
 - [x] List of Running Services & Applications
 - [x] Extracts Product Key
 - [x] Self-Destructs After Execution (optional)
-
-### Telegram Session Stealer Usage :
-After the exfiltrated data is uploaded to your C2 server, download the zip file and extract it on your PC, inside that folder there will also be another subfolder `Messaging Sessions` , inside this subfolder you will find the `Telegram` folder.
-Now, copy the `tdata` folder from `Telegram` folder and paste it in the directory below:
-```bat
-%userprofile%\AppData\Roaming\Telegram Desktop
-```
-Before pasting the tdata folder, ensure that you have deleted or backup the existing tdata folder on your PC.
-![telegram](https://github.com/Pirate-Devs/Kematian/raw/main/assets/telegram.png)
-
- > [!NOTE]   
- > ***The other session stealers can be utilized by applying the technique above***
  
 ## 🗑 Uninstaller (Removes the Scheduled Task, Script Folder, ExclusionPaths and Resets Hosts File)
 - Open a new Elevated Powershell Console then copy & paste the contents below

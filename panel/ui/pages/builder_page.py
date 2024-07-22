@@ -1,7 +1,5 @@
 from panel.ui.modules.builder.main import BuildPayload
-
 from panel.ui.media.images import Images
-
 from nicegui import ui
 
 

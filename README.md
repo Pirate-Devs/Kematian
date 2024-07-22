@@ -1,37 +1,37 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/assets/kematian.png", width="400", height="400">
+<img src="https://raw.githubusercontent.com/Pirate-Devs/Kematian/main/assets/kematian.png", width="400", height="400">
 </div>
 
 <div align="center">
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/actions/workflows/build_builder.yml">
-  <img src="https://img.shields.io/github/actions/workflow/status/Somali-Devs/Kematian-Stealer/build_builder.yml?style=flat&label=builder-src&color=fa7202" alt="Builder Src"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/actions/workflows/build_backend.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/Somali-Devs/Kematian-Stealer/build_backend.yml?style=flat&label=kematian-src&color=fa7202" alt="Kematian Src">
+  <a href="https://github.com/Pirate-Devs/Kematian/actions/workflows/build_builder.yml">
+  <img src="https://img.shields.io/github/actions/workflow/status/Pirate-Devs/Kematian/build_builder.yml?style=flat&label=builder-src&color=fa7202" alt="Builder Src"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/actions/workflows/build_backend.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/Pirate-Devs/Kematian/build_backend.yml?style=flat&label=kematian-src&color=fa7202" alt="Kematian Src">
   </a>
   <br>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
-    <img src="https://img.shields.io/github/languages/top/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Top Language"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/stargazers">
-    <img src="https://img.shields.io/github/stars/Somali-Devs/Kematian-Stealer?style=flat&color=fa7202" alt="Stars"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/forks">
-    <img src="https://img.shields.io/github/forks/Somali-Devs/Kematian-Stealer?style=flat&color=fa7202" alt="Forks"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/issues">
-    <img src="https://img.shields.io/github/issues/Somali-Devs/Kematian-Stealer?style=flat&color=fa7202" alt="Issues"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/commits">
-    <img src="https://img.shields.io/github/commit-activity/m/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Commit Activity"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/tree/main/frontend-src">
+  <a href="https://github.com/Pirate-Devs/Kematian">
+    <img src="https://img.shields.io/github/languages/top/Pirate-Devs/Kematian?color=fa7202" alt="Top Language"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/stargazers">
+    <img src="https://img.shields.io/github/stars/Pirate-Devs/Kematian?style=flat&color=fa7202" alt="Stars"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/forks">
+    <img src="https://img.shields.io/github/forks/Pirate-Devs/Kematian?style=flat&color=fa7202" alt="Forks"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/issues">
+    <img src="https://img.shields.io/github/issues/Pirate-Devs/Kematian?style=flat&color=fa7202" alt="Issues"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/commits">
+    <img src="https://img.shields.io/github/commit-activity/m/Pirate-Devs/Kematian?color=fa7202" alt="Commit Activity"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/tree/main/frontend-src">
     <img src="https://img.shields.io/badge/Powershell-v5.0-fa7202" alt="Powershell v5.0"></a>
   <br>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer?tab=MIT-1-ov-file">
-    <img src="https://img.shields.io/github/license/Somali-Devs/Kematian-Stealer?color=fa7202" alt="License"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Contributors"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
+  <a href="https://github.com/Pirate-Devs/Kematian?tab=MIT-1-ov-file">
+    <img src="https://img.shields.io/github/license/Pirate-Devs/Kematian?color=fa7202" alt="License"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Pirate-Devs/Kematian?color=fa7202" alt="Contributors"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian">
     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSomali-Devs%2FKematian-Stealer&count_bg=%23FA7202&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false" alt="Views"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
-    <img src="https://img.shields.io/github/repo-size/Somali-Devs/Kematian-Stealer?color=fa7202" alt="Repo Size"></a>
-  <a href="https://github.com/Somali-Devs/Kematian-Stealer">
-    <img src="https://img.shields.io/github/downloads/Somali-Devs/Kematian-Stealer/total?color=fa7202" alt="Total Downloads"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian">
+    <img src="https://img.shields.io/github/repo-size/Pirate-Devs/Kematian?color=fa7202" alt="Repo Size"></a>
+  <a href="https://github.com/Pirate-Devs/Kematian">
+    <img src="https://img.shields.io/github/downloads/Pirate-Devs/Kematian/total?color=fa7202" alt="Total Downloads"></a>
 </div>
 
 
@@ -57,7 +57,7 @@ Moreover, the tool has robust `persistence mechanisms` to remain active on the m
 ## Setup Instructions And Video Guide Below 
 <a href="https://devs.sped.lol/kematian-stealer"><img src="https://img.shields.io/badge/GitBook-6A6965?style=for-the-badge&logo=gitbook&logoColor=white"></a>
 <a href="https://youtu.be/k-vastcKfwY"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
-- Download [Builder](https://github.com/Somali-Devs/Kematian-Stealer/releases/download/AutoBuild/main.exe) from the releases.
+- Download [Builder](https://github.com/Pirate-Devs/Kematian/releases/download/AutoBuild/main.exe) from the releases.
 - The builder will automatically generate your `private key` and `certificate` at first run, you can find them here `$env:appdata\Kematian-Stealer`
 - After opening the builder, it will also start a local server which will run on `https://127.0.0.1:8080` by default.
 - Open your web browser and go to `https://127.0.0.1:8080/builder`
@@ -99,7 +99,7 @@ $encryption_key = "YOUR_ENC_KEY_HERE"
 
 # Screenshots
   ## 🔨 Builder
-> ![builder](https://raw.githubusercontent.com/Somali-Devs/Kematian-Stealer/main/assets/builder.png)
+> ![builder](https://raw.githubusercontent.com/Pirate-Devs/Kematian/main/assets/builder.png)
 
    ### Builder Features
  - [x] 🔸 Obfuscation of `BAT` and `PS1` files
@@ -178,7 +178,7 @@ Now, copy the `tdata` folder from `Telegram` folder and paste it in the director
 %userprofile%\AppData\Roaming\Telegram Desktop
 ```
 Before pasting the tdata folder, ensure that you have deleted or backup the existing tdata folder on your PC.
-![telegram](https://github.com/Somali-Devs/Kematian-Stealer/raw/main/assets/telegram.png)
+![telegram](https://github.com/Pirate-Devs/Kematian/raw/main/assets/telegram.png)
 
  > [!NOTE]   
  > ***The other session stealers can be utilized by applying the technique above***
@@ -224,10 +224,10 @@ Cleanup
 - [Join the discussion group](https://t.me/+RHUnNVumwmlmM2Fh)
 
 # Bug Reports and Suggestions
-Found a bug? Have an idea? Let me know [here](https://github.com/Somali-Devs/Kematian-Stealer/issues), Please provide a detailed explanation of the expected behavior, actual behavior, and steps to reproduce, or what you want to see and how it could be done. You can be a small part of this project!
+Found a bug? Have an idea? Let me know [here](https://github.com/Pirate-Devs/Kematian/issues), Please provide a detailed explanation of the expected behavior, actual behavior, and steps to reproduce, or what you want to see and how it could be done. You can be a small part of this project!
 
 # License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Somali-Devs/Kematian-Stealer/blob/main/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Pirate-Devs/Kematian/blob/main/LICENSE) file for details
 
 # Disclaimer
 The developers of Kematian Stealer disclaim any liability for actions or damages resulting from the use of this software. Users are fully responsible for their actions and recognize that this tool is intended solely for educational use. It is not meant to be used for malicious purposes or on systems that you do not own or have permission to access. By using this software, you implicitly agree to these terms.

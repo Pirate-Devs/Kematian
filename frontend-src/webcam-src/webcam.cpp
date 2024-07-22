@@ -136,7 +136,6 @@ int main(int argc, char** argv)
 		}
 		n++;
 	}
-
 	hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
 	if (hr != S_OK)
 	exit_message("Could not initialise COM", 1);
@@ -145,7 +144,6 @@ int main(int argc, char** argv)
 	(void**)&pGraph);
 	if (hr != S_OK)
 	exit_message("Could not create filter graph", 1);
-
 	hr = CoCreateInstance(CLSID_CaptureGraphBuilder2, NULL,
 	CLSCTX_INPROC_SERVER, IID_ICaptureGraphBuilder2,
 	(void**)&pBuilder);
@@ -162,7 +160,6 @@ int main(int argc, char** argv)
 	CLSID_VideoInputDeviceCategory, &pEnum, 0);
 	if (hr != S_OK)
 	exit_message("No video devices found", 1);
-
 	if (list_devices != 0)
 	{
 		fprintf(stderr, "Available capture devices:\n");

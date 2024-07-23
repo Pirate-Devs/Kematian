@@ -8,6 +8,7 @@
 #include <Endpointvolume.h>
 #include <Audioclient.h>
 #include <comdef.h> 
+
 #pragma comment(lib, "Winmm.lib")
 #pragma comment(lib, "Ole32.lib")
 #pragma comment(lib, "Mmdevapi.lib")

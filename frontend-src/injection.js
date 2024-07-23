@@ -8,7 +8,6 @@
 const os = require("os");
 const https = require("https");
 const querystring = require("querystring");
-
 const { BrowserWindow, session } = require("electron");
 
 const CONFIG = {

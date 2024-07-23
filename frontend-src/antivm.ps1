@@ -86,7 +86,7 @@ function Invoke-ANTITOTAL {
     $urls = @(
         "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/mac_list.txt",
         "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/ip_list.txt",
-        "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/hwid_list.txt"
+        "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/hwid_list.txt",
     )
     $functions = @(
         "Search-Mac",

@@ -91,7 +91,7 @@ function Invoke-ANTITOTAL {
     $functions = @(
         "Search-Mac",
         "Search-IP",
-        "Search-HWID"
+        "Search-HWID",
     )
     $data = @()
     foreach ($func in $functions) {

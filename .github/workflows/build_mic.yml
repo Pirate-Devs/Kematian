@@ -7,7 +7,6 @@ on:
       - 'frontend-src/mic-src/**'
 jobs:
   build:
-
     strategy:
       matrix:
         configuration: [Release]

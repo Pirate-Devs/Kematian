@@ -1,5 +1,4 @@
 package util
-
 import (
 	"os"
 )

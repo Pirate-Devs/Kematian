@@ -1,4 +1,4 @@
-name: Build 7zr Compression and Encryption Tool
+name: Build 7zr Tool
 
 on:
   push:

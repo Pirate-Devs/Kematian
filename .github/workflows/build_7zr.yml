@@ -37,6 +37,7 @@ jobs:
       with:
         tag_name: 7zrBuild
         release_name: 7zrBuild
+        body: "Release created by GitHub Actions"
         body: "7zrBuild"
         draft: false
         prerelease: false

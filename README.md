@@ -48,7 +48,7 @@ Moreover, the tool has robust `persistence mechanisms` to remain active on the m
 # Use Cases
 
 - **Security Audits**: For ethical hackers or system administrators to test the security and data exposure of local systems.
-- **Data Recovery**: Assists in recovering lost passwords, cookies and other crucial data for legitimate purposes without dropping compiled binaries on disk.
+- **Data Recovery**: Assists in recovering lost passwords, cookies and other crucial data for legitimate purposes.
 
 > [!TIP]
 > Please refrain from opening issues related to detections, as it is pointless. This project's objective is to facilitate teaching and learning. If you need a FUD stealer, simply create one or REFUD it yourself. 

@@ -1251,7 +1251,7 @@ function Backup-Data {
     $webClient = New-Object System.Net.WebClient
     $webClient.DownloadFile($url, $7zr)
     if (Test-Path $zipFilePath) {Remove-Item $zipFilePath -Force}
-    & $7zr "a" "-t7z" "-mx=9" "-mhe=on" "$zipFilePath" "$folder_general" "-p$encryption_key" | out-null 
+    & $7zr "a" "-t7z" "-mx=9" "-mhe=on" "$zipFilePath" "$folder_general" "-p$encryption_key" 
     Write-Host "Decryption KEY: $encryption_key" -ForegroundColor Green
     Remove-Item "$7zr" -Force
     Write-Host "[!] Compression and Encryption Completed" -ForegroundColor Green

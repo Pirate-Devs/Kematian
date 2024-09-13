@@ -81,13 +81,11 @@ async def clients_page_stuff(db_path: str) -> None:
     with ui.card().classes(
         "w-full h-full justify-center no-shadow border-[1px] border-gray-200 rounded-lg"
     ):
-        with ui.table(
-            columns,
-            rows=data,
-            pagination=10,
-            selection="single",
-            title="Clients Page",
-        ).classes("h-full w-full bordered") as table:
+        # fixed the TypeError by passing arguments to the ui.table() using keyword arguments.
+        # previous version passed arguments positionally, which caused a mismatch with the expected constructor
+        # of the Table class, resulting in the error: "Table.__init__() takes 1 positional argument but 2 were given."
+        # now, columns, rows, pagination, selection, and title are passed as keyword arguments, resolving the issue :)
+        with ui.table(columns=columns, rows=data, pagination=10, selection="single", title="Clients Page").classes("h-full w-full bordered") as table:
             with table.add_slot("top-right"):
                 with ui.input(placeholder="Search").props("type=search").bind_value(
                     table, "filter"
